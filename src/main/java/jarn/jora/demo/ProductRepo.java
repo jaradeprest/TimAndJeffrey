@@ -1,4 +1,6 @@
 package jarn.jora.demo;
 
-public interface ProductRepo {
+import org.springframework.data.repository.CrudRepository;
+
+public interface ProductRepo extends CrudRepository<Product, Integer> {
 }
