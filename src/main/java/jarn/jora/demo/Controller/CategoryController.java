@@ -19,7 +19,6 @@ public class CategoryController {
 
     @Autowired
     private ProductRepo repo;
-    private ArrayList<Product> catList = new ArrayList<>();
 
     @ModelAttribute("category")
     public Iterable<Product> findCat(ModelMap catMap, @PathVariable(value = "category") Category category){
@@ -28,7 +27,7 @@ public class CategoryController {
     }
 
     @RequestMapping(value = "/category/{category}", method = RequestMethod.GET)
-    public String showCategory(ModelMap catMap, @PathVariable(value = "category") Category category){
+    public String showCategory(){
         return "category";
     }
 }
