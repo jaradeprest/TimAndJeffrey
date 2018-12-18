@@ -6,22 +6,29 @@ import jarn.jora.demo.model.ProductRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.jws.WebParam;
+import java.util.ArrayList;
 
 @Controller
 public class CategoryController {
 
     @Autowired
     private ProductRepo repo;
+    private ArrayList<Product> catList = new ArrayList<>();
+
+    @ModelAttribute("category")
+    public Iterable<Product> findCat(ModelMap catMap, @PathVariable(value = "category") Category category){
+        return repo.findByCategory(category);
+
+    }
 
     @RequestMapping(value = "/category/{category}", method = RequestMethod.GET)
     public String showCategory(ModelMap catMap, @PathVariable(value = "category") Category category){
-        Product p = repo.findByCategory(category);
-        catMap.addAttribute("Product",p);
         return "category";
     }
 }

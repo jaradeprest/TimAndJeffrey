@@ -21,7 +21,7 @@ public class ProductController {
     }
 
     @RequestMapping(value = {"/","/index"},method = RequestMethod.GET)
-    private String showIndex(ModelMap map){
+    public String showIndex(ModelMap map){
         return "index";
     }
 }

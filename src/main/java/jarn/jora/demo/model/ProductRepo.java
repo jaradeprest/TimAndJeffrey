@@ -2,7 +2,9 @@ package jarn.jora.demo.model;
 
 import org.springframework.data.repository.CrudRepository;
 
+import java.util.ArrayList;
+
 public interface ProductRepo extends CrudRepository<Product, Integer> {
 
-    Product findByCategory(Category category);
+    ArrayList<Product> findByCategory(Category category);
 }

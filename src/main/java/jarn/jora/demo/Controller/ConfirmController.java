@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class ConfirmController {
 
     @RequestMapping(value = "/confirm",method = RequestMethod.GET)
-    private String showIndex(){
+    public String showConfirm(){
         return "confirmOrder";
     }
 }

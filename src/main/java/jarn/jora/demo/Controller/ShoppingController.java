@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class ShoppingController {
 
     @RequestMapping(value = "/shoppingbasket",method = RequestMethod.GET)
-    private String showIndex(){
+    public String showBasket(){
         return "shoppingbasket";
     }
 }
