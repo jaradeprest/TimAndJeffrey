@@ -1,4 +1,4 @@
-package jarn.jora.demo;
+package jarn.jora.demo.model;
 
 import org.springframework.data.repository.CrudRepository;
 

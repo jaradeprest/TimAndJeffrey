@@ -1,4 +1,4 @@
-package jarn.jora.demo;
+package jarn.jora.demo.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
