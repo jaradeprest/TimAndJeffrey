@@ -1,0 +1,23 @@
+nav{
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100000000000;
+    text-decoration: none;
+    background-color: gold;
+    color: ghostwhite;
+}
+
+
+nav a{
+    padding: 10px;
+    text-decoration: none;
+    font-family: Impact, monospace;
+    font-size: 16pt;
+}
+
+nav a:hover{
+    color: goldenrod;
+}
