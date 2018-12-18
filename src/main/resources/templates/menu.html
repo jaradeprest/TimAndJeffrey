@@ -11,15 +11,18 @@
 <nav th:fragment="navigation" class="navbar">
             <a th:href="@{~/index}">Home</a>
             <a th:href="@{~/about}">About</a>
-            <div class="dropdown">
-                <button class="dropbtn">Category<i class="fa fa-caret-down"></i></button>
-                <div class="dropdown">
-                    <a th:href="@{~/category/nutrition}">Nutrition</a>
-                    <a th:href="@{~/category/toys}">Toys</a>
-                    <a th:href="@{~/category/habitat}">Habitat</a>
-                </div>
-            </div>
+
+    <div class="dropdown">
+        <button class="dropbtn">Category</button>
+        <div class="dropdown-content">
+            <a th:href="@{~/category/nutrition}">Nutrition</a>
+            <a th:href="@{~/category/toys}">Toys</a>
+            <a th:href="@{~/category/habitat}">Habitat</a>
+        </div>
+    </div>
+
 </nav>
+
 
 
 
