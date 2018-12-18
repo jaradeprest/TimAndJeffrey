@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+    <link rel="stylesheet" th:href="@{css/main.css}">
+</head>
+<body>
+<nav th:fragment="navigation">
+    <ul>
+        <li>
+            <a th:href="@{~/index}">
+                Home
+            </a>
+        </li>
+        <li>
+            <a th:href="@{~/about}">
+                About
+            </a>
+        </li>
+        <li>
+            <div class="dropdown">
+                <button class="dropbtn">Dropdown
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a th:href="@{~/category/nutrition}">Nutrition</a>
+                    <a th:href="@{~/category/toys}">Toys</a>
+                    <a th:href="@{~/category/habitat}">Habitat</a>
+                </div>
+            </div>
+        </li>
+    </ul>
+</nav>
+</body>
+</html>
