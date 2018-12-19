@@ -41,36 +41,14 @@ public class ShoppingController {
        return basket.getShoppingbasket();
     }
 
+
     @RequestMapping(value = "/shoppingbasket",method = RequestMethod.GET)
     public String showBasket(){
         return "shoppingbasket";
     }
 
-
-
+    @ModelAttribute("sum")
+    public float Sum(){
+        return basket.basketSum();
+    }
 }
-
-
-
-
-    /*@ModelAttribute("shoppingbasket")
-    @RequestMapping(value = "/shoppinbasket/{id}",method = RequestMethod.GET)
-    public ArrayList<Product> addToBasket(ModelMap shoppingMap, @PathVariable(value = "id") int id ){
-        Product p = repo.findById(id).get();
-        shoppingMap.addAttribute("product", p);
-        return shoppingBasket;
-    }
-
-    @ModelAttribute("addToBasket")
-    public Product productToSave(){
-        return new Product();
-    }
-
-    @RequestMapping(value = "/shoppingbasket/{id}", method = RequestMethod.GET)
-    public String saveProduct(ModelMap shoppingmap, @PathVariable(value = "id")@ModelAttribute("addToBasket") int id){
-        Product p = repo.findById(id).get();
-        shoppingbasket.add(p);
-        return "shoppingbasket";
-    }
-
-    */

@@ -36,6 +36,7 @@
         <p th:text="${product.price}"></p>
         <p th:text="${product.brand}"></p>
         <p th:text="${product.description}"></p>
+        <p><a th:href="@{~/shoppingbasket/{id}(id=${product.id})}" >Add to basket</a></p>
     </div>
 </body>
 </html>
