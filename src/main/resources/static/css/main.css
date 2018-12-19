@@ -11,3 +11,23 @@ body{
     margin-top: 80px;
 }
 
+h1{
+    font-family: Impact, monospace;
+    font-size: 14pt;
+    color: blanchedalmond;
+    background-color: goldenrod;
+    width: 100%;
+    text-align: center;
+
+}
+
+#details{
+    margin-top: 40px;
+}
+
+#details p{
+    font-family: monospace;
+    font-size: 12pt;
+    color: goldenrod;
+    text-align: center;
+}
