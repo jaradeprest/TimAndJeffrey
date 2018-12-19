@@ -3,6 +3,8 @@ package jarn.jora.demo.model;
 import javax.persistence.Entity;
 import java.util.ArrayList;
 
+import static java.lang.Math.round;
+
 public class shoppingbasket {
 
     private ArrayList<Product> shoppingbasket = new ArrayList<Product>();
@@ -34,14 +36,28 @@ public class shoppingbasket {
 
     public float basketSum(){
         float sum=0;
+        float sum2=0;
         for(Product product:shoppingbasket){
             sum = sum + product.getPrice();
-        }return sum;
+            sum2 = round(sum*100);
+        }return sum2/100;
     }
 
     public void confirmBasket(){
             shoppingbasket.removeAll(shoppingbasket);
-        }
+
+    }
+
+    public float XmasSale(){
+        float sale = basketSum()/2;
+        float sale2 = round(sale*100);
+        return sale2/100;
+    }
+
+
+
+
+
 
 }
 

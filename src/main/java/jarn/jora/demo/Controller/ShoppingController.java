@@ -59,6 +59,11 @@ public class ShoppingController {
         return basket.basketSum();
     }
 
+    @ModelAttribute("sale")
+    public float sale(){
+        return basket.XmasSale();
+    }
+
     @RequestMapping(value = "/order",method = RequestMethod.GET)
     public String orderBasket(){
         basket.confirmBasket();
