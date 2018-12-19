@@ -39,4 +39,9 @@ public class shoppingbasket {
         }return sum;
     }
 
+    public void confirmBasket(){
+            shoppingbasket.removeAll(shoppingbasket);
+        }
+
 }
+

@@ -51,4 +51,12 @@ public class ShoppingController {
     public float Sum(){
         return basket.basketSum();
     }
+
+    @RequestMapping(value = "/order",method = RequestMethod.GET)
+    public String orderBasket(){
+        basket.confirmBasket();
+        return "confirmOrder";
+    }
+
+
 }
