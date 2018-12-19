@@ -234,11 +234,12 @@
             <form>
                 <input type="radio" name="delivery" value="Collect">Collect<br>
                 <input type="radio" name="delivery" value="Delivery">Delivery<br>
-                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Name" required>
                 <br>
-                <input type="text" PLACEHOLDER="Adres">
+                <input type="text" PLACEHOLDER="Adres" required>
+                <button><a class="orderbutton" th:href="@{/order}">order</a></button>
             </form>
-            <button><a class="orderbutton" th:href="@{/order}">order</a></button>
+
         </div>
     </div>
 </div>
