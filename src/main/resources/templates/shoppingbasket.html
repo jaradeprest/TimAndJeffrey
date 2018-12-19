@@ -234,9 +234,9 @@
             <form>
                 <input type="radio" name="delivery" value="Collect">Collect<br>
                 <input type="radio" name="delivery" value="Delivery">Delivery<br>
-                <input type="text" placeholder="Name">
+                <input type="text" name="name" placeholder="Name" required>
                 <br>
-                <input type="text" PLACEHOLDER="Adres">
+                <input type="text" name="adres" PLACEHOLDER="Adres" required>
             </form>
             <button><a class="orderbutton" th:href="@{/order}">order</a></button>
         </div>
