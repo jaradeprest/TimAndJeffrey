@@ -103,6 +103,39 @@
 
 <div th:replace="~{kerstBanner::banner}">
 </div>
+
+<div id="about">
+    <img id="timjeffrey" th:src="@{~/images/timjeffrey.png}" width="250px"><br>
+<div id="tim">
+    <h1>Tim</h1>
+    <p>Meet Tim. Tim is great. Tim loves animals.</p>
+    <p>Animals are life, animals are love.</p>
+</div>
+<div id="jeffrey">
+    <h1>Jeffrey</h1>
+    <p>Meet Jeffrey AKA G. G is great. G loves animals.</p>
+    <p>G is life, G is love.</p>
+</div>
+<div id="TG">
+    <h1>T&G</h1>
+    <p>Meet T&G, our company. We sell everything for your animal.</p>
+    <p>T&G was founded in 2018, by two close friends with a great passion for animals.</p>
+    <p>The goal was to create a shop, for big and small, old and young, fish or snake, horse or cat.</p>
+    <p>Didn't find what you were looking for? Let us know! We'll find it for you!</p>
+    <form>
+        First name:<br>
+        <input type="text" name="firstname" required minlength="2" placeholder="type your firstname"><br>
+        Last name:<br>
+        <input type="text" name="lastname" required minlength="2" placeholder="type your lastname"><br>
+        Email:<br>
+        <input type="email" name="email" placeholder="type your email" required><br>
+        Message:<br>
+        <textarea cols="40" rows="4" name="question" required placeholder="type your message"></textarea><br>
+        <button th:href="@{~/about.html}">Send!</button>
+    </form>
+</div>
+</div>
+
 <img src="images/TandG.png">
 <footer>&copy; Tim&Jeffrey</footer>
 
