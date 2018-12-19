@@ -26,6 +26,13 @@ public class ShoppingController {
     public String addToBasket(@PathVariable(value = "id") int id){
         Product p = repo.findById(id).get();
         basket.addToBasket(p);
+        return "redirect:/index";
+    }
+
+    @RequestMapping(value = "/categoryBasket/{id}",method = RequestMethod.GET)
+    public String addCatToBasket(@PathVariable(value = "id") int id){
+        Product p = repo.findById(id).get();
+        basket.addToBasket(p);
         return "redirect:/shoppingbasket";
     }
 

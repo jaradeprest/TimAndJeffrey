@@ -38,7 +38,7 @@
         <tr th:each="product:${category}">
             <td th:text="${product.getName()}"></td>
             <td th:text="${product.getPrice()}"></td>
-            <td><a class="btn" th:href="shoppingkart">Add to basket</a></td>
+            <td><a th:href="@{~/categoryBasket/{id}(id=${product.id})}" ><img id="shoppingkart" src="images/shoppingcart.png" width="50px"></a></td>
         </tr>
     </table>
 
