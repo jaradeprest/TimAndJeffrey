@@ -29,7 +29,10 @@
     <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
 </head>
 <body>
+<div th:replace="~{menu::navigation}">
+</div>
     <table>
+        <thead>Your shoppingbasket:</thead>
         <tr th:each="product:${shoppingbasket}">
             <td th:text="${product.getName()}"></td>
             <td th:text="${product.getPrice()}"></td>
@@ -38,5 +41,8 @@
     </table>
 <p th:text="'Totaal bedrag:'+' ' + ${sum}"></p>
 <a th:href="@{/order}">order</a>
+
+<footer>&copy; Tim&Jeffrey</footer>
+
 </body>
 </html>
