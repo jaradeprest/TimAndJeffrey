@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-<html lang="en"
-      xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <title>Details</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Home</title>
-
     <!-- bootstrap + css -->
     <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -29,42 +27,15 @@
     <!--scripts datatable-->
     <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('#productTable').DataTable({
-                "paging":false,
-                "info":false,
-                "lengthChange":false,
-                "ordering":false,
-                "searching":false
-            });
-        });
-    </script>
 </head>
 <body>
-<div th:replace="~{menu::navigation}">
-</div>
-<div id="producttable">
-    <table>
-        <thead>
-        <tr>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Basket</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:each="product:${all}">
-            <td ><a th:text="${product.name}" th:href="@{/details/{id}(id=${product.id})}"></a></td>
-            <td th:text="${product.price}"></td>
-            <td><a th:href="@{~/shoppingbasket/{id}(id=${product.id})}" >Add to basket</a></td>
-
-
-        </tr>
-        </tbody>
-    </table>
-</div>
-
-<footer>&copy; Tim&Jeffrey</footer>
+    <div>
+        <p th:text="${product.id}"></p>
+        <p th:text="${product.name}"></p>
+        <p th:text="${product.category}"></p>
+        <p th:text="${product.price}"></p>
+        <p th:text="${product.brand}"></p>
+        <p th:text="${product.description}"></p>
+    </div>
 </body>
 </html>
