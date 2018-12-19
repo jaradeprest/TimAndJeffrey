@@ -129,16 +129,3 @@ table tr td a{
 }
 
 
-footer{
-    text-align: center;
-    width: 100%;
-    height: 20pt;
-    padding: 6pt;
-    position: fixed;
-    text-decoration: none;
-    font-size: 8pt;
-    font-family: monospace;
-    background-color: #3e8e41;
-    color: ghostwhite;
-    bottom: 0;
-}

@@ -9,6 +9,7 @@ body{
 
 #producttable{
     margin-top: 80px;
+    margin-bottom: 40px;
 }
 
 h1{
@@ -30,4 +31,18 @@ h1{
     font-size: 12pt;
     color: goldenrod;
     text-align: center;
+}
+
+footer{
+    text-align: center;
+    width: 100%;
+    height: 20pt;
+    padding: 6pt;
+    text-decoration: none;
+    font-size: 8pt;
+    font-family: monospace;
+    background-color: #3e8e41;
+    color: ghostwhite;
+    bottom: 0;
+    margin-top: 20pt;
 }
