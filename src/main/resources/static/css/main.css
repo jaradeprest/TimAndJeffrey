@@ -46,6 +46,22 @@ footer{
     bottom: 0;
     margin-top: 20pt;
 }
+.thanks{
+    font-size: 300%;
+    text-align: center;
+}
+
+.orderbutton{
+    text-decoration: none;
+    color: black;
+}
+
+.orderbutton:hover{
+    text-decoration: none;
+}
+
+
+
 
 #about{
     margin-top: 40px;
