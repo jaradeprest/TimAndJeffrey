@@ -9,7 +9,7 @@
 <body>
 
 <nav th:fragment="navigation" class="navbar">
-            <a th:href="@{~/index}" id="logo"><img src="images/logo1.png" width="120px"></a>
+            <a th:href="@{~/index}" id="logo"><img th:src="@{images/logo1.png}" width="120px"></a>
             <a th:href="@{~/about}">About</a>
 
     <div class="dropdown">
@@ -20,7 +20,7 @@
             <a th:href="@{~/category/habitat}">Habitat</a>
         </div>
     </div>
-            <a th:href="@{~/shoppingbasket}"><img src="images/shoppingcart.png" width="100px"></a>
+            <a th:href="@{~/shoppingbasket}"><img th:src="@{~/images/shoppingcart.png}" width="100px"></a>
 
 </nav>
 

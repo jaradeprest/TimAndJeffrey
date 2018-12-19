@@ -42,7 +42,6 @@
 </head>
 <body>
 
-
 <!--SNOWFLAKES-->
 <style>
     /* customizable snowflake styling */
@@ -115,8 +114,6 @@
             <td ><a class="link" th:text="${product.name}" th:href="@{/details/{id}(id=${product.id})}"></a></td>
             <td th:text="${product.price}"></td>
             <td><a th:href="@{~/shoppingbasket/{id}(id=${product.id})}" ><img id="shoppingkart" src="images/shoppingcart.png" width="50px"></a></td>
-
-
         </tr>
         </tbody>
     </table>
