@@ -31,12 +31,8 @@
     <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
     <script>
         $(document).ready(function() {
-            $('#productTable').DataTable({
-                "paging":false,
-                "info":false,
-                "lengthChange":false,
-                "ordering":false,
-                "searching":false
+            $('#producttafel').DataTable({
+
             });
         });
     </script>
@@ -45,7 +41,7 @@
 <div th:replace="~{menu::navigation}">
 </div>
 <div id="producttable">
-    <table>
+    <table id="producttafel">
         <thead>
         <tr>
             <th>Name</th>
