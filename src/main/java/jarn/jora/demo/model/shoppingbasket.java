@@ -21,4 +21,15 @@ public class shoppingbasket {
     public void addToBasket(Product p){
         shoppingbasket.add(p);
     }
+
+    public void deleteFromBasket(Product product) {shoppingbasket.remove(product);}
+
+    public Product findInBasket(int id){
+        for (Product i:shoppingbasket){
+            if (i.getId()==id){
+                return i;
+            }
+        }return null;
+    }
+
 }

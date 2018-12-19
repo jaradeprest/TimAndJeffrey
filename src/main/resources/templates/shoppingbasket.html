@@ -32,6 +32,8 @@
     <table>
         <tr th:each="product:${shoppingbasket}">
             <td th:text="${product.getName()}"></td>
+            <td th:text="${product.getPrice()}"></td>
+            <td><a th:href="@{/delete/{id}(id=${product.id})}">Delete from basket</a></td>
         </tr>
     </table>
 </body>
