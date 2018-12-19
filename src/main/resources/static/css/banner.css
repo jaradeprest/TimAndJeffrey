@@ -1,0 +1,19 @@
+.banner{
+    left:0;
+    width: 100%;
+    text-align: center;
+    color: ghostwhite;
+    background-color: crimson;
+    display: inline-block;
+    font-family: 'Mountains of Christmas', cursive;
+    font-size: 26pt;
+}
+
+.banner div p{
+    padding: 10px;
+}
+
+.banner div img{
+    padding: 0;
+    margin: 5px;
+}

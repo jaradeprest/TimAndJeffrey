@@ -36,7 +36,7 @@
         <tr th:each="product:${shoppingbasket}">
             <td th:text="${product.getName()}"></td>
             <td th:text="${product.getPrice()}"></td>
-            <td><a class="deleteKnop" th:href="@{/delete/{id}(id=${product.id})}">Delete from basket</a></td>
+            <td><a class="deleteKnop" th:href="@{/delete/{id}(id=${product.id})}"><img src="images/garbagecat.png" width="70px"></a></td>
         </tr>
     </table>
 <p th:text="'Total:'+' ' + ${sum}"></p>
