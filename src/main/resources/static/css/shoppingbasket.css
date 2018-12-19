@@ -1,0 +1,13 @@
+.column {
+    float: left;
+    width: 50%;
+    padding-left: 100px;
+
+}
+.row{
+    content: "";
+    display: table;
+    clear: both;
+    margin-left: 50px;
+
+}

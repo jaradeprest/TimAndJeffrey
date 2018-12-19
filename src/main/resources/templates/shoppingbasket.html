@@ -11,7 +11,7 @@
           crossorigin="anonymous">
     <link rel="stylesheet" th:href="@{css/main.css}">
     <link rel="stylesheet" th:href="@{css/menu.css}">
-    <link rel="stylesheet" th:href="@{~/css/shoppinbasket.css}">
+    <link rel="stylesheet" th:href="@{~/css/shoppingbasket.css}">
     <!--css datatable-->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
 
@@ -230,7 +230,7 @@
         <div class="column">
             <p th:text="'Total:'+' ' + ${sum}+' '+'euro'"></p>
             <p th:text="'New Xmas Total: '+' ' + ${sale}+' '+'euro'"></p>
-            <a th:href="@{/order}">order</a>
+
             <form>
                 <input type="radio" name="delivery" value="Collect">Collect<br>
                 <input type="radio" name="delivery" value="Delivery">Delivery<br>
@@ -238,6 +238,7 @@
                 <br>
                 <input type="text" PLACEHOLDER="Adres">
             </form>
+            <button><a class="orderbutton" th:href="@{/order}">order</a></button>
         </div>
     </div>
 </div>

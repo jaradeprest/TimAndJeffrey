@@ -31,3 +31,19 @@ h1{
     color: goldenrod;
     text-align: center;
 }
+
+.thanks{
+    font-size: 300%;
+    text-align: center;
+}
+
+.orderbutton{
+    text-decoration: none;
+    color: black;
+}
+
+.orderbutton:hover{
+    text-decoration: none;
+}
+
+
