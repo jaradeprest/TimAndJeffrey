@@ -26,7 +26,14 @@ public class ShoppingController {
     public String addToBasket(@PathVariable(value = "id") int id){
         Product p = repo.findById(id).get();
         basket.addToBasket(p);
-        return "shoppingbasket";
+        return "redirect:/shoppingbasket";
+    }
+
+    @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
+    public String deleteFromBasket (@PathVariable(value = "id") int id){
+        Product product = basket.findInBasket(id);
+        basket.deleteFromBasket(product);
+        return "redirect:/shoppingbasket";
     }
 
     @ModelAttribute("shoppingbasket")
