@@ -32,4 +32,11 @@ public class shoppingbasket {
         }return null;
     }
 
+    public float basketSum(){
+        float sum=0;
+        for(Product product:shoppingbasket){
+            sum = sum + product.getPrice();
+        }return sum;
+    }
+
 }
