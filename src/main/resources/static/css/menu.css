@@ -78,3 +78,46 @@ nav a:hover{
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
 }
+
+table{
+    padding: 2px;
+    font-family: monospace;
+    font-size: 12pt;
+    color: #3e8e41;
+    background-color: ghostwhite;
+    border: solid #3e8e41;
+    margin: 10px;
+}
+
+table tr th {
+    padding: 10px;
+}
+
+table tr td {
+    padding: 10px;
+}
+
+.deleteKnop{
+    text-decoration: none;
+    color: ghostwhite;
+    font-size: 12pt;
+    border: none;
+    font-family: monospace;
+    background-color: #3e8e41;
+    padding: 2px;
+}
+
+
+footer{
+    text-align: center;
+    width: 100%;
+    height: 20pt;
+    padding: 6pt;
+    position: fixed;
+    text-decoration: none;
+    font-size: 8pt;
+    font-family: monospace;
+    background-color: #3e8e41;
+    color: ghostwhite;
+    bottom: 0;
+}
