@@ -2,6 +2,7 @@ package jarn.jora.demo.Controller;
 
 import jarn.jora.demo.model.Product;
 import jarn.jora.demo.model.ProductRepo;
+import jarn.jora.demo.model.shoppingbasket;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -17,32 +18,32 @@ public class ShoppingController {
 
     @Autowired
     private ProductRepo repo;
+    private shoppingbasket basket= new shoppingbasket();
+
+
+
+    @RequestMapping(value = "/shoppingbasket/{id}",method = RequestMethod.GET)
+    public String addToBasket(@PathVariable(value = "id") int id){
+        Product p = repo.findById(id).get();
+        basket.addToBasket(p);
+        return "shoppingbasket";
+    }
+
+    @ModelAttribute("shoppingbasket")
+    public ArrayList<Product> findBasket(){
+       return basket.getShoppingbasket();
+    }
 
     @RequestMapping(value = "/shoppingbasket",method = RequestMethod.GET)
     public String showBasket(){
         return "shoppingbasket";
     }
 
-    @ModelAttribute("addToBasket")
-    public Product productToSave(){
-        return new Product();
-    }
-
-    @RequestMapping(value = "/shoppingbasket", method = RequestMethod.POST)
-    public String saveProduct(@ModelAttribute("addToBasket") Product addToBasket){
-        repo.save(addToBasket);
-        return "shoppingbasket";
-    }
-
-
-
 
 
 }
 
 
-
-//private ArrayList<Product> shoppingBasket = new ArrayList<>();
 
 
     /*@ModelAttribute("shoppingbasket")
@@ -52,4 +53,17 @@ public class ShoppingController {
         shoppingMap.addAttribute("product", p);
         return shoppingBasket;
     }
+
+    @ModelAttribute("addToBasket")
+    public Product productToSave(){
+        return new Product();
+    }
+
+    @RequestMapping(value = "/shoppingbasket/{id}", method = RequestMethod.GET)
+    public String saveProduct(ModelMap shoppingmap, @PathVariable(value = "id")@ModelAttribute("addToBasket") int id){
+        Product p = repo.findById(id).get();
+        shoppingbasket.add(p);
+        return "shoppingbasket";
+    }
+
     */

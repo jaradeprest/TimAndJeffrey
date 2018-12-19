@@ -30,8 +30,8 @@
 </head>
 <body>
     <table>
-        <tr th:each="product:${addToBasket}">
-            <td th:text="${product.name}"></td>
+        <tr th:each="product:${shoppingbasket}">
+            <td th:text="${product.getName()}"></td>
         </tr>
     </table>
 </body>

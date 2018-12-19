@@ -57,9 +57,9 @@
         <tr th:each="Product:${all}">
             <td th:text="${Product.name}"></td>
             <td th:text="${Product.price}"></td>
-            <!--<td><a th:href="@{shoppingbasket}" th:list="${addToBasket}">Add to basket</a></td>-->
+            <td><a th:href="@{/shoppingbasket/{id}(id=${Product.id})}" >Add to basket</a></td>
 
-            <td><a class="btn" th:href="shoppingkart">Add to basket</a></td>
+
         </tr>
         </tbody>
     </table>
