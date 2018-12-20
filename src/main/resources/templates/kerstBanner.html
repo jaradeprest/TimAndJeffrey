@@ -8,12 +8,17 @@
     <link href="https://fonts.googleapis.com/css?family=Mountains+of+Christmas" rel="stylesheet">
 </head>
 <body>
+<div class="container-fluid">
+    <div class="row">
     <div th:fragment="banner" class="banner">
             <div>
+                <div class="col-sm-12">
                 <img th:src="@{~/images/kerstmis.png}" height="50px">
                 <p id="xmas">X-MAS SALE! 50% OFF! ORDER NOW!!!</p>
+                </div>
             </div>
     </div>
-
+    </div>
+</div>
 </body>
 </html>

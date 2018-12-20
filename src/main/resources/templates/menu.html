@@ -7,25 +7,37 @@
     <link rel="stylesheet" th:href="@{css/menu.css}">
 </head>
 <body>
+<div class="container-fluid">
+    <div class="row">
 
-<nav th:fragment="navigation" class="navbar">
-            <a th:href="@{~/index}" id="logo"><img th:src="@{~/images/logo1.png}" width="120px"></a>
-            <a th:href="@{~/about}">About</a>
+        <nav th:fragment="navigation" class="navbar">
+            <div class="col-sm-4">
+                <a th:href="@{~/index}" id="logo"><img th:src="@{~/images/logo1.png}" width="120px"></a>
+            </div>
+            <div class="col-sm-3">
+                <button class="dropbtn"><a th:href="@{~/about}">About</a></button>
+            </div>
+            <div class="col-sm-3">
+                <div class="dropdown">
+                    <button class="dropbtn">Category</button>
+                    <div class="dropdown-content">
+                        <a th:href="@{~/category/nutrition}">Nutrition</a>
+                        <a th:href="@{~/category/toys}">Toys</a>
+                        <a th:href="@{~/category/habitat}">Habitat</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-1">
+                <a th:href="@{~/shoppingbasket}"><img th:src="@{~/images/shoppingcart.png}" height="50px"></a>
+            </div>
+            <div class="col-sm-1">
+                <a th:href="@{~/registration}"><img th:src="@{~/images/profilePIC.png}" height="50px"></a>
+            </div>
 
-    <div class="dropdown">
-        <button class="dropbtn">Category</button>
-        <div class="dropdown-content">
-            <a th:href="@{~/category/nutrition}">Nutrition</a>
-            <a th:href="@{~/category/toys}">Toys</a>
-            <a th:href="@{~/category/habitat}">Habitat</a>
-        </div>
+        </nav>
     </div>
-            <a th:href="@{~/shoppingbasket}"><img th:src="@{~/images/shoppingcart.png}" height="50px"></a>
-            <a th:href="@{~/registration}"><img th:src="@{~/images/profilePIC.png}" height="50px"></a>
-
-</nav>
-
-
+</div>
+</div>
 
 
 </body>
