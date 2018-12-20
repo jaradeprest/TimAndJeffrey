@@ -91,6 +91,11 @@ footer{
     margin-bottom: 40px;
 }
 
+#columnRight{
+    text-align: center;
+    margin-top: 40px
+}
+
 .row{
     text-align: center;
     text-decoration: none;
@@ -99,6 +104,18 @@ footer{
 .col-sm-12{
     padding: 0;
 }
+.counter{
+    height: 35px;
+    width: 35px;
+    margin-top: -70px;
+    font-size: 20px;
+    border: solid red 3px;
+    border-radius: 17px;
+    background-color: lightcoral;
+    font-weight: bold;
+    z-index: 100000000000000000000000000;
+}
+
 
 .col-sm-6{
     padding: 0;
