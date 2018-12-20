@@ -2,6 +2,7 @@ package jarn.jora.demo.model;
 
 import javax.persistence.Entity;
 import java.util.ArrayList;
+import java.util.Collections;
 
 import static java.lang.Math.round;
 
@@ -20,44 +21,47 @@ public class shoppingbasket {
         this.shoppingbasket = shoppingbasket;
     }
 
-    public void addToBasket(Product p){
+    public void addToBasket(Product p) {
         shoppingbasket.add(p);
     }
 
-    public void deleteFromBasket(Product product) {shoppingbasket.remove(product);}
+    public void deleteFromBasket(Product product) {
+        shoppingbasket.remove(product);
+    }
 
-    public Product findInBasket(int id){
-        for (Product i:shoppingbasket){
-            if (i.getId()==id){
+    public Product findInBasket(int id) {
+        for (Product i : shoppingbasket) {
+            if (i.getId() == id) {
                 return i;
             }
-        }return null;
+        }
+        return null;
     }
 
-    public float basketSum(){
-        float sum=0;
-        float sum2=0;
-        for(Product product:shoppingbasket){
+    public float basketSum() {
+        float sum = 0;
+        float sum2 = 0;
+        for (Product product : shoppingbasket) {
             sum = sum + product.getPrice();
-            sum2 = round(sum*100);
-        }return sum2/100;
+            sum2 = round(sum * 100);
+        }
+        return sum2 / 100;
     }
 
-    public void confirmBasket(){
-            shoppingbasket.removeAll(shoppingbasket);
+    public void confirmBasket() {
+        shoppingbasket.removeAll(shoppingbasket);
 
     }
 
-    public float XmasSale(){
-        float sale = basketSum()/2;
-        float sale2 = round(sale*100);
-        return sale2/100;
+    public float XmasSale() {
+        float sale = basketSum() / 2;
+        float sale2 = round(sale * 100);
+        return sale2 / 100;
     }
-
-
-
-
 
 
 }
+
+
+
 

@@ -10,6 +10,12 @@ body{
 #producttable{
     margin-top: 80px;
     margin-bottom: 40px;
+    position: center;
+    margin-left: 250px;
+    margin-right: 250px;
+}
+#producttafel{
+    width: 100%;
 }
 h1{
     font-family: Impact, monospace;
