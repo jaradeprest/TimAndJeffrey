@@ -72,6 +72,7 @@ footer{
     text-decoration: none;
 }
 
+
 /*ABOUT*/
 #about{
     margin-top: 40px;
@@ -128,4 +129,18 @@ footer{
 .col-sm-6{
     padding: 0;
     margin: 0;
+    text-align: center;
+}
+
+div table thead{
+    font-family: Impact, monospace;
+    font-size: 14pt;
+    color: #3e8e41;
+}
+
+#kerst{
+    color: crimson;
+    font-family: 'Mountains of Christmas', sans-serif;
+    font-weight: bold;
+    font-size: 16pt;
 }
