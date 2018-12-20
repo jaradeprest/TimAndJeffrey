@@ -16,22 +16,25 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import javax.validation.Valid;
 
 @Controller
-    public class RegistrationController {
-    private shoppingbasket basket= new shoppingbasket();
+public class RegistrationController {
+    private shoppingbasket basket = new shoppingbasket();
 
     @Autowired
     private CustomerRepo repo;
 
-    @RequestMapping(value = "/registration",method = RequestMethod.GET)
-    public String showRegi(ModelMap regiMap){
+    //registratie pagina openenen
+    @RequestMapping(value = "/registration", method = RequestMethod.GET)
+    public String showRegi(ModelMap regiMap) {
         return "registration";
     }
 
+    //nieuwe klant aanspreken
     @ModelAttribute("newCustomer")
     public Customer newCustomer() {
         return new Customer();
     }
 
+    //nieuwe klant opslaan in de database
     @RequestMapping(value = "/registration", method = RequestMethod.POST)
     public String newCustomer(@ModelAttribute("newCustomer") @Valid Customer newCustomer, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
@@ -41,14 +44,9 @@ import javax.validation.Valid;
         return "redirect:/index";
     }
 
-    @RequestMapping(value = "/profile/{id}", method = RequestMethod.GET)
-    public String showProfile(ModelMap profileMap, @PathVariable(value = "id") int id){
-        Customer cust = repo.findById(id).get();
-        profileMap.addAttribute("customer", cust);
-        return "/profile";
-    }
+    //de hoeveelheid producten in het winkelmandje laten zien
     @ModelAttribute("counter")
-    public int count(){
+    public int count() {
         return basket.counter();
     }
 }

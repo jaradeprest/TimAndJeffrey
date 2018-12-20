@@ -18,62 +18,68 @@ public class ShoppingController {
 
     @Autowired
     private ProductRepo repo;
-    private shoppingbasket basket= new shoppingbasket();
+    private shoppingbasket basket = new shoppingbasket();
 
 
-
-    @RequestMapping(value = "/shoppingbasket/{id}",method = RequestMethod.GET)
-    public String addToBasket(@PathVariable(value = "id") int id){
+    //producten toevoegen in het winkelmandje
+    @RequestMapping(value = "/shoppingbasket/{id}", method = RequestMethod.GET)
+    public String addToBasket(@PathVariable(value = "id") int id) {
         Product p = repo.findById(id).get();
         basket.addToBasket(p);
         return "redirect:/index";
     }
 
-    @RequestMapping(value = "/categoryBasket/{id}",method = RequestMethod.GET)
-    public String addCatToBasket(@PathVariable(value = "id") int id){
+    //producten toevoegen vanuit category pagina
+    @RequestMapping(value = "/categoryBasket/{id}", method = RequestMethod.GET)
+    public String addCatToBasket(@PathVariable(value = "id") int id) {
         Product p = repo.findById(id).get();
         basket.addToBasket(p);
         return "redirect:/shoppingbasket";
     }
 
+    //producten verwijderen uit het winkelmandje
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
-    public String deleteFromBasket (@PathVariable(value = "id") int id){
+    public String deleteFromBasket(@PathVariable(value = "id") int id) {
         Product product = basket.findInBasket(id);
         basket.deleteFromBasket(product);
         return "redirect:/shoppingbasket";
     }
 
+    //het winkelmandje aanspreken
     @ModelAttribute("shoppingbasket")
-    public ArrayList<Product> findBasket(){
-       return basket.getShoppingbasket();
+    public ArrayList<Product> findBasket() {
+        return basket.getShoppingbasket();
     }
 
-
-    @RequestMapping(value = "/shoppingbasket",method = RequestMethod.GET)
-    public String showBasket(){
+    //het winkelmandje laten zien
+    @RequestMapping(value = "/shoppingbasket", method = RequestMethod.GET)
+    public String showBasket() {
         return "shoppingbasket";
     }
 
+    //de som van het winkelmandje laten zien
     @ModelAttribute("sum")
-    public float Sum(){
+    public float Sum() {
         return basket.basketSum();
     }
 
+    //de som van het winkelmandje na de kerstkorting
     @ModelAttribute("sale")
-    public float sale(){
+    public float sale() {
         return basket.XmasSale();
     }
 
 
-
-    @RequestMapping(value = "/order",method = RequestMethod.GET)
-    public String orderBasket(){
+    //de bestelling bevestigen
+    @RequestMapping(value = "/order", method = RequestMethod.GET)
+    public String orderBasket() {
         basket.confirmBasket();
         return "confirmOrder";
     }
 
+    //de hoeveelheid producten in het winkelmandje laten zien
     @ModelAttribute("counter")
-    public int count(){
+    public int count() {
         return basket.counter();
     }
 

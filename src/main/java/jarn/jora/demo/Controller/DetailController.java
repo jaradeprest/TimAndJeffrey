@@ -13,19 +13,21 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class DetailController {
-    private shoppingbasket basket= new shoppingbasket();
+    private shoppingbasket basket = new shoppingbasket();
     @Autowired
     private ProductRepo repo;
 
+    //details pagina openenen voor verschillende id's
     @RequestMapping(value = "/details/{id}", method = RequestMethod.GET)
-    public String showDetails(ModelMap detailMap, @PathVariable(value = "id") int id){
+    public String showDetails(ModelMap detailMap, @PathVariable(value = "id") int id) {
         Product prod = repo.findById(id).get();
         detailMap.addAttribute("product", prod);
         return "/details";
     }
 
+    //de hoeveelheid producten in het winkelmandje laten zien
     @ModelAttribute("counter")
-    public int count(){
+    public int count() {
         return basket.counter();
     }
 }

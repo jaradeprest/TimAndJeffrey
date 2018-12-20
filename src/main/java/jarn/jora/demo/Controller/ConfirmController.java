@@ -8,8 +8,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class ConfirmController {
 
-    @RequestMapping(value = "/confirm",method = RequestMethod.GET)
-    public String showConfirm(){
+
+    //bevestigings pagina openen
+    @RequestMapping(value = "/confirm", method = RequestMethod.GET)
+    public String showConfirm() {
         return "confirmOrder";
     }
 }

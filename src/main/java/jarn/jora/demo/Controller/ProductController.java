@@ -16,24 +16,25 @@ public class ProductController {
 
     @Autowired
     private ProductRepo repo;
-    private shoppingbasket basket= new shoppingbasket();
+    private shoppingbasket basket = new shoppingbasket();
 
+    //alle producten in de database laten zien
     @ModelAttribute("all")
-    public Iterable<Product> findAll(){
+    public Iterable<Product> findAll() {
         return repo.findAll();
     }
 
-    @RequestMapping(value = {"/","/index"},method = RequestMethod.GET)
-    public String showIndex(ModelMap map){
+    //index pagina openen
+    @RequestMapping(value = {"/", "/index"}, method = RequestMethod.GET)
+    public String showIndex(ModelMap map) {
         return "index";
     }
 
+    //de hoeveelheid producten in het winkelmandje laten zien
     @ModelAttribute("counter")
-    public int count(){
+    public int count() {
         return basket.counter();
     }
-
-
 
 
 }

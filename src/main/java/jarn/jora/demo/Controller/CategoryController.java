@@ -18,21 +18,24 @@ public class CategoryController {
 
     @Autowired
     private ProductRepo repo;
-    private shoppingbasket basket= new shoppingbasket();
+    private shoppingbasket basket = new shoppingbasket();
 
+    //de producten van een bepaalde category weergeven
     @ModelAttribute("category")
-    public Iterable<Product> findCat(ModelMap catMap, @PathVariable(value = "category") Category category){
+    public Iterable<Product> findCat(ModelMap catMap, @PathVariable(value = "category") Category category) {
         return repo.findByCategory(category);
 
     }
 
+    //category pagina openen van verschillende categories
     @RequestMapping(value = "/category/{category}", method = RequestMethod.GET)
-    public String showCategory(){
+    public String showCategory() {
         return "category";
     }
 
+    //de hoeveelheid producten in het winkelmandje laten zien
     @ModelAttribute("counter")
-    public int count(){
+    public int count() {
         return basket.counter();
     }
 }

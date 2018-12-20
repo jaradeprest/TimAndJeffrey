@@ -11,11 +11,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class AboutController {
     private shoppingbasket basket = new shoppingbasket();
 
+    //about pagina openen
     @RequestMapping(value = "/about", method = RequestMethod.GET)
     public String showAbout() {
         return "about";
     }
 
+    //de hoeveelheid producten in het winkelmandje laten zien
     @ModelAttribute("counter")
     public int count() {
         return basket.counter();
