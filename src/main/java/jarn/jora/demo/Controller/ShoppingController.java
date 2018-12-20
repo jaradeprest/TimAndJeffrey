@@ -5,7 +5,6 @@ import jarn.jora.demo.model.ProductRepo;
 import jarn.jora.demo.model.shoppingbasket;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,6 +18,7 @@ public class ShoppingController {
     @Autowired
     private ProductRepo repo;
     private shoppingbasket basket= new shoppingbasket();
+    private Order order=new Order();
 
 
 
@@ -70,5 +70,12 @@ public class ShoppingController {
         return "confirmOrder";
     }
 
+
+
+    /*@RequestMapping(value = "/orderSave",method = RequestMethod.GET)
+    public String orderData(){
+        order.confirmOrder();
+        return "confirmOrder";
+    }*/
 
 }
