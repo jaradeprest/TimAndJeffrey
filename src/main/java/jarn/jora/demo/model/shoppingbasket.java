@@ -8,7 +8,7 @@ import static java.lang.Math.round;
 
 public class shoppingbasket {
 
-    private ArrayList<Product> shoppingbasket = new ArrayList<Product>();
+    private static ArrayList<Product> shoppingbasket = new ArrayList<Product>();
 
     public shoppingbasket() {
     }
@@ -57,6 +57,10 @@ public class shoppingbasket {
         float sale = basketSum() / 2;
         float sale2 = round(sale * 100);
         return sale2 / 100;
+    }
+
+    public int counter(){
+        return shoppingbasket.size();
     }
 
 

@@ -100,7 +100,7 @@
 <div th:replace="~{kerstBanner::banner}">
 </div>
 
-
+<p class="counter" th:text="${counter}"></p>
 
 <div id="producttable">
     <table id="producttafel">
@@ -113,6 +113,7 @@
         </tr>
         </thead>
         <tbody>
+
         <tr th:each="product:${all}">
             <td ><a class="link" th:text="${product.name}" th:href="@{/details/{id}(id=${product.id})}"></a></td>
             <td th:text="${product.category}"></td>

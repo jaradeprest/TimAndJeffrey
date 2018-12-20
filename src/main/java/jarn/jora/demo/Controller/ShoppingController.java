@@ -64,10 +64,17 @@ public class ShoppingController {
         return basket.XmasSale();
     }
 
+
+
     @RequestMapping(value = "/order",method = RequestMethod.GET)
     public String orderBasket(){
         basket.confirmBasket();
         return "confirmOrder";
+    }
+
+    @ModelAttribute("counter")
+    public int count(){
+        return basket.counter();
     }
 
 

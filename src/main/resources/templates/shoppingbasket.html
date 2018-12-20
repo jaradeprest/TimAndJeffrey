@@ -214,10 +214,12 @@
 
 <div th:replace="~{menu::navigation}">
 </div>
+<p class="counter" th:text="${counter}"></p>
 <div class="details">
     <div class="row">
         <div class="column">
             <table>
+
                 <thead>Your shoppingbasket:</thead>
                 <tr th:each="product:${shoppingbasket}">
                     <td th:text="${product.getName()}"></td>
