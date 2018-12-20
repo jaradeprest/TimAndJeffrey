@@ -169,3 +169,7 @@ h2{
     font-weight: bold;
     font-size: 16pt;
 }
+
+.error{
+    color: crimson;
+}

@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotBlank;
 
 @Entity
 public class Customer {
@@ -11,9 +12,13 @@ public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @NotBlank (message = "please fill in your name")
     private String name;
+    @NotBlank (message = "please fill in your email")
     private String email;
+    @NotBlank (message = "please fill in your adress")
     private String adres;
+    @NotBlank (message = "please fill in your phonenumber, for emergency use only.")
     private String phoneNumber;
 
     public Customer() {
