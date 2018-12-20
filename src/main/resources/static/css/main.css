@@ -57,9 +57,26 @@ footer{
     margin-top: 20pt;
 }
 
+.footerFix{
+    position: absolute;
+}
+
 /*ORDER EN CONFIRM ORDER*/
 .thanks{
+    font-family: Impact, monospace;
     font-size: 300%;
+    text-align: center;
+}
+
+#please{
+    font-family: monospace;
+    font-size: 150%;
+    text-align: center;
+}
+
+.friends{
+    font-family: monospace;
+    font-size: 75%;
     text-align: center;
 }
 
@@ -137,6 +154,12 @@ footer{
 div table thead{
     font-family: Impact, monospace;
     font-size: 14pt;
+    color: #3e8e41;
+}
+
+h2{
+    font-family: Impact, monospace;
+    font-size: 20pt;
     color: #3e8e41;
 }
 
