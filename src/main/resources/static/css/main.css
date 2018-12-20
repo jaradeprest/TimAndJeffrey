@@ -11,11 +11,16 @@ body{
     margin-top: 80px;
     margin-bottom: 40px;
     position: center;
-    margin-left: 250px;
-    margin-right: 250px;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 #producttafel{
     width: 100%;
+    border: none;
+}
+
+.odd{
+    background-color: blanchedalmond;
 }
 h1{
     font-family: Impact, monospace;
@@ -96,4 +101,3 @@ footer{
     text-decoration: none;
 }
 
-/*SHOPPINGBASKET IMG*/

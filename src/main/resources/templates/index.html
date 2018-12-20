@@ -15,6 +15,9 @@
     <link rel="stylesheet" th:href="@{css/menu.css}">
     <link rel="stylesheet" th:href="@{css/banner.css}">
     <link href="https://fonts.googleapis.com/css?family=Mountains+of+Christmas" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{~/static/bootstrap/bootstrap.css}">
+    <link rel="stylesheet" th:href="@{~/static/bootstrap/bootstrap-grid.css}">
+    <link rel="stylesheet" th:href="@{~/static/bootstrap/bootstrap-reboot.css}">
 
     <!--css datatable-->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
@@ -41,7 +44,8 @@
     </script>
 </head>
 <body>
-
+<div class="container-fluid">
+    <div class="row">
 <!--SNOWFLAKES-->
 <style>
     /* customizable snowflake styling */
@@ -101,7 +105,7 @@
 </div>
 
 
-
+<div class="col-sm-12">
 <div id="producttable">
     <table id="producttafel">
         <thead>
@@ -113,7 +117,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:each="product:${all}">
+        <tr th:each="product:${all}"th:class="(${productStat.odd})?'odd':'even'">
             <td ><a class="link" th:text="${product.name}" th:href="@{/details/{id}(id=${product.id})}"></a></td>
             <td th:text="${product.category}"></td>
             <td th:text="${product.price}"></td>
@@ -121,6 +125,9 @@
         </tr>
         </tbody>
     </table>
+</div>
+</div>
+    </div>
 </div>
 
 <footer>&copy; Tim&Jeffrey</footer>

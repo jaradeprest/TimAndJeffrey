@@ -2,11 +2,13 @@ package jarn.jora.demo.Controller;
 
 import jarn.jora.demo.model.CustomerRepo;
 import jarn.jora.demo.model.Customer;
+import jarn.jora.demo.model.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -35,5 +37,12 @@ public class RegistrationController {
         }
         repo.save(newCustomer);
         return "redirect:/index";
+    }
+
+    @RequestMapping(value = "/profile/{id}", method = RequestMethod.GET)
+    public String showProfile(ModelMap profileMap, @PathVariable(value = "id") int id){
+        Customer cust = repo.findById(id).get();
+        profileMap.addAttribute("customer", cust);
+        return "/profile";
     }
 }

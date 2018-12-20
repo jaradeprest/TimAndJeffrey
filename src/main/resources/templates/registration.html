@@ -214,33 +214,37 @@
 
 <div th:replace="~{menu::navigation}">
 </div>
-<table>
+
+<div id="producttable">
+<table id="producttafel">
     <form method="post" th:action="@{registration}" th:object="${newCustomer}">
         <tr>
             <td><label>Name</label></td>
-            <td><input type="text" th:field="*{name}"></td>
+            <td><input type="text" th:field="*{name}" placeholder=" Your name"></td>
             <td><span class="error" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span></td>
         </tr>
         <tr>
             <td><label>Email</label></td>
-            <td><input type="text" th:field="*{email}"></td>
+            <td><input type="text" th:field="*{email}" placeholder=" Your email"></td>
             <td><span class="error" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span></td>
         </tr>
         <tr>
             <td><label>Adres</label></td>
-            <td><input type="text" th:field="*{adres}"></td>
+            <td><input type="text" th:field="*{adres}" placeholder=" Your adress"></td>
             <td><span class="error" th:if="${#fields.hasErrors('adres')}" th:errors="*{adres}"></span></td>
         </tr>
         <tr>
             <td><label>Phonenumber</label></td>
-            <td><input type="text" th:field="*{phoneNumber}"></td>
+            <td><input type="text" th:field="*{phoneNumber}" placeholder=" Your phonenumber"></td>
             <td><span class="error" th:if="${#fields.hasErrors('phoneNumber')}" th:errors="*{phoneNumber}"></span></td>
         </tr>
         <tr>
-            <td><input value="Register" type="submit"></td>
+            <td><input value="Register" type="submit" ></td>
+
         </tr>
 
     </form>
 </table>
+</div>
 </body>
 </html>
