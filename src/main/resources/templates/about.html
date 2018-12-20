@@ -4,19 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>About</title>
+    <title>Home</title>
 
     <!-- bootstrap + css -->
     <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
           crossorigin="anonymous">
-
-    <link rel="stylesheet" th:href="@{~/css/main.css}">
-    <link rel="stylesheet" th:href="@{~/css/menu.css}">
-    <link rel="stylesheet" th:href="@{~/css/banner.css}">
-    <link rel="stylesheet" th:href="@{~/css/shoppingbasket.css}">
+    <link rel="stylesheet" th:href="@{css/main.css}">
+    <link rel="stylesheet" th:href="@{css/menu.css}">
+    <link rel="stylesheet" th:href="@{css/banner.css}">
     <link href="https://fonts.googleapis.com/css?family=Mountains+of+Christmas" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{~/static/bootstrap/bootstrap.css}">
+    <link rel="stylesheet" th:href="@{~/static/bootstrap/bootstrap-grid.css}">
+    <link rel="stylesheet" th:href="@{~/static/bootstrap/bootstrap-reboot.css}">
 
     <!--css datatable-->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
@@ -36,12 +37,8 @@
     <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
     <script>
         $(document).ready(function () {
-            $('#productTable').DataTable({
-                "paging": false,
-                "info": false,
-                "lengthChange": false,
-                "ordering": false,
-                "searching": false
+            $('#producttafel').DataTable({
+                "ordering": true
             });
         });
     </script>
@@ -244,9 +241,9 @@
             </div>
         </div>
     </div>
+
     <div class="row">
-        <div class="col-sm-6">
-            <div id="about">
+        <div class="col-sm-6" id="about">
                 <img id="timjeffrey" th:src="@{~/images/timjeffrey.png}" height="200px"><br>
                 <div id="tim">
                     <h1>Tim</h1>
@@ -277,10 +274,9 @@
                                   placeholder="type your message"></textarea><br>
                         <button th:href="@{~/about.html}">Send!</button>
                     </form>
-                </div>
             </div>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-6" id="info">
             <img id="jimteffrey" th:src="@{~/images/TandG2.png}" height="200px">
             <h1>The opening hours</h1>
             <p>Monday-Friday: 10h-18h30</p>
