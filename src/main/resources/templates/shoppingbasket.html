@@ -250,7 +250,11 @@
         <div class="col-sm-4">
             <table>
 
-                <thead>Your shoppingbasket:</thead>
+                <thead>
+                <th>Your shoppingbasket:</th>
+                <th> </th>
+                <th> </th>
+                </thead>
                 <tr th:each="product:${shoppingbasket}">
                     <td th:text="${product.getName()}"></td>
                     <td th:text="${product.getPrice()}"></td>
@@ -259,23 +263,34 @@
                 </tr>
             </table>
         </div>
-        <div class="col-sm-6">>
+        <div class="col-sm-2"></div>
+        <div class="col-sm-4">
+            <table>
+                <thead>
+                <th>Your order:</th>
+                </thead>
+                <td>
             <p th:text="'Total:'+' ' + ${sum}+' '+'euro'"></p>
-            <p th:text="'New Xmas Total: '+' ' + ${sale}+' '+'euro'"></p>
+            <p id="kerst" th:text="'New Xmas Total: '+' ' + ${sale}+' '+'euro'"></p>
+
+
 
             <form>
                 <input type="radio" name="delivery" value="Collect">Collect<br>
-                <input type="radio" name="delivery" value="Delivery">Delivery<br>
-                <input type="text" name="name" placeholder="Name" required><br>
-                <input type="text" name="adres" PLACEHOLDER="Adres" required><br>
+                <input type="radio" name="delivery" value="Delivery">Delivery<br><br>
+                <input type="text" name="name" placeholder="Name" required><br><br>
+                <input type="text" name="adres" PLACEHOLDER="Adres" required><br><br>
                 <button><a class="orderbutton" th:href="@{/order}">order</a></button>
             </form>
+                </td>
+            </table>
         </div>
+
     </div>
 </div>
 
 
-<footer>&copy; Tim&Jeffrey</footer>
+<footer class="footerFix">&copy; Tim&Jeffrey</footer>
 
 </body>
 </html>
