@@ -3,14 +3,44 @@
       xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Menu</title>
+    <!-- bootstrap + css -->
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{css/main.css}">
+
+    <link rel="stylesheet" th:href="@{css/banner.css}">
     <link rel="stylesheet" th:href="@{css/menu.css}">
+    <link href="https://fonts.googleapis.com/css?family=Mountains+of+Christmas" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{~/static/bootstrap/bootstrap.css}">
+    <link rel="stylesheet" th:href="@{~/static/bootstrap/bootstrap-grid.css}">
+    <link rel="stylesheet" th:href="@{~/static/bootstrap/bootstrap-reboot.css}">
+
+    <!--css datatable-->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+
+    <!--scripts-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+    <!--scripts datatable-->
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
 </head>
 <body>
 <div class="container-fluid">
     <div class="row">
 
-        <nav th:fragment="navigation" class="navbar">
+        <nav th:fragment="navigation" class="navbar" id="myTopnav">
             <div class="col-sm-4">
                 <a th:href="@{~/index}" id="logo"><img th:src="@{~/images/logo1.png}" width="120px"></a>
             </div>
@@ -28,16 +58,17 @@
                 </div>
             </div>
             <div class="col-sm-1">
-                <a th:href="@{~/shoppingbasket}"><img th:src="@{~/images/shoppingcart.png}" height="50px"></a>
-            </div>
-            <div class="col-sm-1">
                 <a th:href="@{~/registration}"><img th:src="@{~/images/profilePIC.png}" height="50px"></a>
             </div>
+            <div class="col-sm-1">
+                <a th:href="@{~/shoppingbasket}"><img th:src="@{~/images/shoppingcart.png}" height="50px"></a>
+            </div>
+
 
         </nav>
     </div>
 </div>
-</div>
+
 
 
 </body>
