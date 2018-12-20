@@ -18,6 +18,7 @@ public class Product {
     private String description;
 
     public Product() {
+
     }
 
     public int getId() {
@@ -68,3 +69,4 @@ public class Product {
         this.description = description;
     }
 }
+
