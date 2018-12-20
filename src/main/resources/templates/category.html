@@ -111,7 +111,7 @@
         </thead>
         <tbody>
         <tr th:each="product:${category}">
-            <td th:text="${product.getName()}"></td>
+            <td><a class="link" th:text="${product.name}" th:href="@{/details/{id}(id=${product.id})}"></a></td>
             <td th:text="${product.getPrice()}"></td>
             <td><a th:href="@{~/categoryBasket/{id}(id=${product.id})}" ><img id="shoppingkart" th:src="@{~/images/shoppingcart.png}" width="50px"></a></td>
         </tr>
