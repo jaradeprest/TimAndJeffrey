@@ -18,8 +18,6 @@ public class ShoppingController {
     @Autowired
     private ProductRepo repo;
     private shoppingbasket basket= new shoppingbasket();
-    private Order order=new Order();
-
 
 
     @RequestMapping(value = "/shoppingbasket/{id}",method = RequestMethod.GET)

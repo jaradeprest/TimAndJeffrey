@@ -45,6 +45,8 @@ footer{
     bottom: 0;
     margin-top: 20pt;
 }
+
+/*ORDER EN CONFIRM ORDER*/
 .thanks{
     font-size: 300%;
     text-align: center;
@@ -59,9 +61,7 @@ footer{
     text-decoration: none;
 }
 
-
-
-
+/*ABOUT*/
 #about{
     margin-top: 40px;
     text-align: center;
@@ -75,3 +75,5 @@ footer{
 #timjeffrey{
     margin-bottom: 40px;
 }
+
+/*SHOPPINGBASKET IMG*/
