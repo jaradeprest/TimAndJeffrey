@@ -117,12 +117,14 @@ footer{
     height: 35px;
     width: 35px;
     margin-top: -70px;
+    margin-left: 8px;
     font-size: 20px;
     border: solid red 3px;
     border-radius: 17px;
     background-color: lightcoral;
     font-weight: bold;
-    z-index: 100000000000000000000000000;
+    z-index: 100000;
+    position: relative;
 }
 
 
