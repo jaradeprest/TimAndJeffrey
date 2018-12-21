@@ -81,30 +81,7 @@ nav a:hover{
     background-color: #3e8e41;
 }
 
-table{
-    padding: 2px;
-    font-family: monospace;
-    font-size: 12pt;
-    color: #3e8e41;
-    background-color: ghostwhite;
-    border: solid #3e8e41;
-    margin: 10px;
-}
 
-table tr th {
-    padding: 10px;
-}
-
-table tr td {
-    padding: 10px;
-    text-decoration: none;
-}
-
-table tr td a{
-    text-decoration: none;
-    color: #3e8e41;
-    text-align: center;
-}
 
 .link:hover{
     text-decoration: none;
@@ -120,12 +97,4 @@ table tr td a{
     text-decoration: none;
 }
 
-.deleteKnop{
-    text-decoration: none;
-    color: ghostwhite;
-    font-size: 12pt;
-    border: none;
-    font-family: monospace;
-    padding: 2px;
-}
 
