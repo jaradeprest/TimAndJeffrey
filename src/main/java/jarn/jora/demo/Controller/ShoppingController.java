@@ -34,7 +34,7 @@ public class ShoppingController {
     public String addCatToBasket(@PathVariable(value = "id") int id) {
         Product p = repo.findById(id).get();
         basket.addToBasket(p);
-        return "redirect:/shoppingbasket";
+        return "redirect:/index";
     }
 
     //producten verwijderen uit het winkelmandje
